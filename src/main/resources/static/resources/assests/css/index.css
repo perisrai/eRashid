@@ -1,0 +1,434 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    background-color: #ededed;
+    font-family: 'Lato', sans-serif;
+}
+
+.main-head {
+    text-align: center;
+    background-color: #092BA5;
+    padding: 10px 0 10px 0;
+}
+
+.main-head h2 {
+    font-size: 24px;
+    font-weight: 900;
+    display: inline-block;
+    color:#fff;
+}
+
+.main-head img {
+    width: 2%;
+    float: right;
+    right: 50px;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.seprate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+nav {
+    background-color: #C51421;
+}
+
+.main-nav ul {
+    display: inline-block;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    padding: 15px 0;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    transition: .3s ease-in-out all;
+}
+
+.main-nav li a:hover {
+    background-color: #CE525B;
+}
+
+.login {
+    display: inline-block;
+    float: right;
+}
+
+.inner-panel {
+    margin-top: 30px;
+    max-width: 100%;
+}
+
+.left-panel,
+.right-panel {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    border-right: 1px solid #a2a2a2;
+    padding: 0 15px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.left-panel p,
+.middle-panel p,
+.right-panel p {
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.middle-panel {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    border-right: 1px solid #a2a2a2;
+    padding: 0 15px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.right-panel {
+    border-right: none;
+}
+
+.middle-panel form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    position: relative;
+    border-bottom: .125rem solid #adadad;
+    margin-bottom: 1rem;
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.form-input input.input, .form-input select.input {
+    height: 2.8125rem;
+    background-color: transparent;
+}
+
+.input {
+    display: inline-block;
+    width: 100%;
+    font-size: .9375rem;
+    color: #555555;
+    line-height: 1.2;
+}
+
+.focus-input {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.focus-input::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0;
+    width: 0;
+    height: .125rem;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    background: #ed1c24;
+}
+
+.focus-input::after {
+    content: attr(data-placeholder);
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.25rem;
+    color: #999999;
+    line-height: 1.2;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+input.input + .focus-input::after, select.input + .focus-input::after {
+    top: 1rem;
+    left: 0;
+}
+
+.form-input input, .form-input select, .form-input textarea {
+    outline: none;
+    border: none;
+}
+
+.form-input select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input:focus + .focus-input::after {
+    top: -0.8125rem;
+    font-size: 1rem;
+}
+
+.input:focus + .focus-input::before {
+    width: 100%;
+}
+
+.has-val.input + .focus-input::after {
+    top: -0.8125rem;
+    font-size: 1rem;
+}
+
+.input-width {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.input-width-lg {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.middle-panel form button {
+    background-color: #C51421;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: .3s ease-in-out all;
+    float: right;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    
+}
+
+.middle-panel form button:hover {
+    background-color:#CE525B;
+}
+
+footer {
+    background-color: #C8C8C8;
+    padding: 50px 0;
+}
+
+.footer-content {
+    text-align: center;
+    color: #F2F2F2;
+}
+
+
+/* 1st page */
+
+
+/* .vehicle-type {
+    background-image: url(../images/car.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+    padding-top: 50px;
+}
+
+.vehicle-type::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5)
+} */
+
+.type-form {
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+    background-color: rgba(255,255,255, 0.5);
+    height: 200px;
+    border-radius: 10px;
+}
+
+.type-form .form-input {
+    display: block;
+}
+
+.type-form label {
+    margin-bottom: 20px;
+}
+
+.type-form .input {
+    color: #000;
+}
+
+.type-form .focus-input::after {
+    color: #000;
+}
+
+.type-form p {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sub-btn,
+.reg-next {
+    text-align: center;
+    
+}
+
+.sub-btn button,
+.reg-next button {
+    background-color: #C51421;;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: .3s ease-in-out all;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sub-btn button:hover,
+.reg-next button:hover {
+    background-color: #CE525B;
+}
+
+/* Registration */
+
+.reg-banner {
+    background-image: url(../images/reg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.reg-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5)
+}
+
+.reg-banner h2 {
+    font-size: 32px;
+    font-weight: 200;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+
+.vehicle-type,
+.imp-detail,
+.manu-detail,
+.duty-detail,
+.vehicle {
+    margin: 30px 0;
+}
+
+.type-form,
+.imp-content,
+.manu-content,
+.duty-content,
+.vehicle-content {
+    width: 50%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.imp-content .form-input,
+.manu-content .form-input,
+.duty-content .form-input,
+.vehicle-content .form-input {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.imp-content h4,
+.manu-content h4,
+.duty-content h4,
+.vehicle-content h4 {
+    font-size: 24px;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.reg-next button {
+    margin: initial;
+    margin-bottom: 30px;
+}
+
+/* Vehicle Details */
+.form {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input {
+    margin: 10px 0;
+}
+
+.form-head {
+    margin: initial;
+    margin-bottom: 20px;
+}
+
+.form-head h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
