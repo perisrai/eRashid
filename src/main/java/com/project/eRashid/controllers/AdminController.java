@@ -40,13 +40,6 @@ public class AdminController {
 		return "search";
 	}
 
-	// @RequestMapping("/ownertransfer")
-	// String ownerTransfer( Model model) {
-	// logger.info("ownership transfer");
-	// model.addAttribute("vehicle", new VehicleDto());
-	// return "ownertransfer";
-	// }
-
 	@PostMapping("/transferOwnership")
 	public String transferOwnership(@ModelAttribute VehicleDto v, Model model) {
 		logger.info("ownership transfer, {}", v);
